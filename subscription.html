@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripción | eMovie+</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="subs_style.css">
+    <link rel="icon" href="e.png" type="image/png">
+</head>
+<body>
+    <section class="navbar">
+        <a href="index.html">
+            <img class="logo" src="e.png" width="26" height="29">
+        </a>
+        <a href="index.html">
+            <p class="logo_text">Movie+</p>
+        </a>
+                <img class="line1" src="Line 1.png">
+        <p class="p_nav" id="titulo"></p>
+        <a href="https://www.stremio.com/" target="_blank"><span class="p_nav_dif">VER AHORA</span></a>
+        <script>
+            let titulos = ["Spider-Man:", "Fallen Angels:", "Duna:", "Fight Club:", "Gone Girl:", "The Godfather:", "Amelie:", "Donnie Darko:", "The Terminator:", "The Lord Of The Rings:", "Star Wars:", "The Dark Knight:", "Pulp Fiction:", "Avengers:", "Back To The Future:", "Mad Max:", "Jurassic Park:"];
+    let indice = Math.floor(Math.random() * titulos.length);
+    
+    let tituloElement = document.getElementById("titulo");
+    
+    tituloElement.textContent = titulos[indice];
+        </script>
+    </section>
+    <div class="form-container" id="subscribe-form">
+        <h2 class="form-title">Suscribirse a eMovie+</h2>
+        <form id="subscribe-form-inner">
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <input type="submit" value="Suscribirse">
+        </form>
+        <div class="login-link">
+            ¿Ya tienes cuenta? <a href="#" id="login-link">Iniciar sesión</a>
+        </div>
+    </div>
+
+    <div class="form-container" id="login-form" style="display: none;">
+        <h2 class="form-title">Iniciar sesión en eMovie+</h2>
+        <form id="login-form-inner">
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            
+                <input type="submit" value="Iniciar sesión" id="iniciarSesionBtn">
+        
+                <script>
+                    let iniciarSesionBtn = document.getElementById("iniciarSesionBtn");
+                
+                    iniciarSesionBtn.addEventListener("click", function() {
+                        window.location.href = "pagina-con-sesion-iniciada.html";
+                    });
+                </script>
+        </form>
+        <div class="login-link">
+            ¿No te has suscrito? <a href="#" id="back-link">Volver atrás</a>
+        </div>
+    </div>
+
+    <div class="form-container loginform" id="success-message" style="display: none;">
+        <h2 class="form-title">¡Felicidades! Te has suscrito con éxito.</h2>
+        <button id="login-button" class="loginbutton">Iniciar sesión</button>
+        <script>
+            let iniciarSesionBtn3 = document.getElementById("login-button");
+        
+            iniciarSesionBtn3.addEventListener("click", function() {
+                window.location.href = "pagina-con-sesion-iniciada.html";
+            });
+        </script>
+    </div>
+
+    <div class="slide">
+  
+        <img src="Rectangle 2.png" class="slide_img">
+        <img src="Rectangle 3.png" class="slide_img">
+        <img src="Rectangle 4.png" class="slide_img">
+        <img src="Rectangle 5.png" class="slide_img">
+    </div>
+
+      <script src="scripts.js"></script> 
+
+
+</body>
+</html>

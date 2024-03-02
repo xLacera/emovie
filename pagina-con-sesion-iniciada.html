@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sesioniniciada.css">
+    <title>Bienvenido | eMovie+</title>
+    <link rel="icon" href="e.png" type="image/png">
+</head>
+<body>
+   
+    <section class="navbar">
+        <a href="index.html">
+        <img class="logo" src="e.png" width="26" height="29">
+    </a>
+    <a href="index.html">
+        <p class="logo_text">Movie+</p>
+    </a>
+            <img class="line1" src="Line 1.png">
+    <p class="p_nav" id="titulo"></p>
+    <a href="https://www.stremio.com/" target="_blank"><span class="p_nav_dif">VER AHORA</span></a>
+    <script>
+        let titulos = ["Spider-Man:", "Fallen Angels:", "Duna:", "Fight Club:", "Gone Girl:", "The Godfather:", "Amelie:", "Donnie Darko:", "The Terminator:", "The Lord Of The Rings:", "Star Wars:", "The Dark Knight:", "Pulp Fiction:", "Avengers:", "Back To The Future:", "Mad Max:", "Jurassic Park:"];
+let indice = Math.floor(Math.random() * titulos.length);
+
+let tituloElement = document.getElementById("titulo");
+
+tituloElement.textContent = titulos[indice];
+    </script>
+    </section>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="movie-name" placeholder="Ingresa el nombre de una película o serie aquí...">
+            <button id="search-btn">Buscar</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script src="index.js"></script>
+    <script src="key.js"></script>
+</body>
+</html>

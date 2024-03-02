@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eMovies+</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="e.png" type="image/png">
+
+</head>
+<body>
+    <section class="navbar">
+        <a href="index.html">
+        <img class="logo" src="e.png" width="26" height="29">
+    </a>
+    <a href="index.html">
+        <p class="logo_text">Movie+</p>
+    </a>
+            <img class="line1" src="Line 1.png">
+    <p class="p_nav" id="titulo"></p>
+    <a href="https://www.stremio.com/" target="_blank"><span class="p_nav_dif">VER AHORA</span></a>
+    <script>
+        let titulos = ["Spider-Man:", "Fallen Angels:", "Duna:", "Fight Club:", "Gone Girl:", "The Godfather:", "Amelie:", "Donnie Darko:", "The Terminator:", "The Lord Of The Rings:", "Star Wars:", "The Dark Knight:", "Pulp Fiction:", "Avengers:", "Back To The Future:", "Mad Max:", "Jurassic Park:"];
+let indice = Math.floor(Math.random() * titulos.length);
+
+let tituloElement = document.getElementById("titulo");
+
+tituloElement.textContent = titulos[indice];
+    </script>
+    </section>
+<section class="hero">
+    <h1 class="title">HISTORIAS ÚNICAS.<br> ESTRELLAS ICÓNICAS.<br> UNA MONTAÑA DE<br> <span class="title_gradient">ENTRETENIMIENTO+</span>  </h1>
+<p class="hero_desc">Suscríbete por <span class="bold">$13,900.00 COP</span> al Mes.<br> Cancela en cualquier momento.<br> Únete ahora y obtén 7 días gratis.</p>
+</section>
+
+<section class="subscription">
+    <button class="subscription1" id="button"><a href="subscription.html">SUSCRÍBETE A eMovie+</a></button>
+    <button class="subscription2" id="iniciarSesionBtn2">YA TENGO eMovie+</button>
+    <script>
+        let iniciarSesionBtn = document.getElementById("iniciarSesionBtn2");
+    
+        iniciarSesionBtn.addEventListener("click", function() {
+            window.location.href = "pagina-con-sesion-iniciada.html";
+        });
+    </script>
+</section>
+</body>
+</html>
