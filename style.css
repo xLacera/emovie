@@ -11,6 +11,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
+    overflow-y: hidden;
     
 }
 
@@ -60,7 +61,7 @@ line-height: 120%;
 }
 
 .hero_desc {
-    margin-top: 28px;
+    margin-top: 19px;
     color: #FFF;
 font-size: 15px;
 font-style: normal;
@@ -73,7 +74,7 @@ line-height: 140%
 }
 
 .subscription {
-    margin-top: 36px;
+    margin-top: 26px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -97,9 +98,6 @@ color: #FFF;
 .subscription1 {
     background: linear-gradient(272deg, #2029FF -20.11%, #A811DA 102.04%);
   border: none;
-}
-.subscription1:hover {
-    background-color: black;
 }
 .subscription2, .login {
     border: 1.5px solid #FFF;
